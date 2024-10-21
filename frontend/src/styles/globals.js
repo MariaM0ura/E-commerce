@@ -914,6 +914,47 @@ margin-top: 160px;
       height: 45px;
     }
   }
+
+  /* ProductForm.css */
+
+.product-form {
+    max-width: 400px; /* Limita a largura do formulário */
+    margin: 20px auto; /* Centraliza o formulário na página */
+    padding: 20px; /* Adiciona espaço interno ao redor do formulário */
+    border: 1px solid #ccc; /* Adiciona uma borda ao redor do formulário */
+    border-radius: 8px; /* Arredonda os cantos da borda */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+    background-color: #f9f9f9; /* Define uma cor de fundo clara */
+}
+
+.product-form h2 {
+    text-align: center; /* Centraliza o título do formulário */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.product-form input {
+    width: 100%; /* Faz os inputs ocuparem toda a largura do formulário */
+    padding: 10px; /* Adiciona espaço interno aos inputs */
+    margin-bottom: 15px; /* Espaço abaixo de cada input */
+    border: 1px solid #ccc; /* Define uma borda para os inputs */
+    border-radius: 4px; /* Arredonda os cantos dos inputs */
+}
+
+.product-form button {
+    width: 100%; /* Faz o botão ocupar toda a largura do formulário */
+    padding: 10px; /* Adiciona espaço interno ao botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 4px; /* Arredonda os cantos do botão */
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+}
+
+.product-form button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
   `;
 
   export default Global;

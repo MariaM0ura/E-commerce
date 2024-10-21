@@ -4,11 +4,9 @@ import Product from './Product';
 import { useStateContext } from '../context/StateContext';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
 
 const ProductCard = ({ product }) => {
     const [products, setProducts] = useState([]);
-    const navigate = useNavigate(); 
 
     const getProducts = async () => {
         try {

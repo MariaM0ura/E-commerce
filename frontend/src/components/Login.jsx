@@ -32,12 +32,12 @@ const Login = () => {
             });
 
             if (response.status === 200) {
-                const token = response.data.token;
-                localStorage.setItem('authToken', token);
-                login(token); 
-                console.log("Login bem-sucedido:", response.data);
-                console.log("Token:", token);
-                navigate('/'); 
+              const token = response.data.token;
+              const adminStatus = response.data.isAdmin; 
+              login(token, adminStatus); 
+              console.log("Login bem-sucedido:", response.data);
+              console.log("Token:", token);
+              navigate('/');
             } 
         } catch (error) {
             if (error.response) {
