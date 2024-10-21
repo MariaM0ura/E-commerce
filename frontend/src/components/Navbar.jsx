@@ -56,7 +56,9 @@ const Navbar = () => {
         
         <div>
           {isAuthenticated ? (
-            <button onClick={logout} aria-label="Logout">
+            <button onClick={() => {
+              logout();
+              navigate('/login');}} aria-label="Logout">
               <AiOutlineLogout className='cart-icon' /> {/* Ícone de Logout */}
             </button>
           ) : (

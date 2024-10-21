@@ -30,11 +30,13 @@ const Cart = () => {
               }))
           };
 
-          const response = await axios.post('http://localhost:8800', compraData);
+          console.log('Dados da compra:', compraData);
+          
+          const response = await axios.post('http://localhost:8800/product/:id', compraData);
           if (response.status === 200) {
               toast.success('Compra realizada com sucesso!');
-              navigate('/success');
               console.log('Compra realizada com sucesso:', response.data);
+              navigate('/sucess');
           } else {
               toast.error('Erro ao realizar a compra.');
           }
@@ -116,7 +118,7 @@ const Cart = () => {
             </div>
             <div className="btn-container">
               <button type="button" className="btn" onClick={handleCheckout}>
-                Finalizar Compra
+              finalize purchase              
               </button>
             </div>
           </div>

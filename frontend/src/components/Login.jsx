@@ -93,7 +93,7 @@ const Login = () => {
       <GlobalStyle />
       <div className="containerLogo">
         <form onSubmit={handleSubmit}>
-          <h1>Acesse o Sistema</h1>
+          <h1>Access the System</h1>
           
           <div className="input-fieldLOGO">
             <input
@@ -127,7 +127,7 @@ const Login = () => {
           
           <div className="recall-forgetLogo">
             <button type="button" onClick={handleForgotSenha}>
-              Esqueceu sua senha?
+              Forgot your password?
             </button>
           </div>
 
@@ -135,9 +135,9 @@ const Login = () => {
 
           <div className="signup-linkLogo">
             <p>
-              Não tem uma conta?{" "}
+            Don't have an account?{" "}
               <button type="button" onClick={handleRegister}>
-                Registrar
+              Register
               </button>
             </p>
           </div>

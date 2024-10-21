@@ -955,6 +955,52 @@ margin-top: 160px;
     background-color: #0056b3; /* Cor do botão ao passar o mouse */
 }
 
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.product-table th, .product-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.product-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.product-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.best-selling-product {
+    background-color: #e7f3fe;
+    border: 1px solid #b8daff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.product-detail-container-dashboard {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail-container-dashboard h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-detail-container-dashboard h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
   `;
 
   export default Global;

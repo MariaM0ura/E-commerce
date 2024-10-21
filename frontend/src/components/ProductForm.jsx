@@ -130,16 +130,17 @@ const Products = () => {
   }, []);
 
   const addProduct = (newProduct) => {
-      axios
-          .post("http://localhost:8800", newProduct)
-          .then((response) => {
-              setProducts([...products, response.data]);
-              fetchProducts();
-          })
-          .catch((error) => {
-              console.error("Erro ao adicionar produto:", error);
-          });
-  };
+    axios
+        .post("http://localhost:8800/admin/products", newProduct)
+        .then((response) => {
+            setProducts([...products, response.data]);
+            fetchProducts();
+        })
+        .catch((error) => {
+            console.error("Erro ao adicionar produto:", error.response.data.message || error.message);
+        });
+};
+
 
   const removeProduct = (id) => {
     axios
