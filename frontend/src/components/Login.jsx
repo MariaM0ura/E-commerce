@@ -25,6 +25,8 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (validate()) {
+        console.log("Dados enviados para login:", { email, senha }); // Log dos dados
+
         try {
             const response = await axios.post("http://localhost:8800/login", {
                 email: email, 
@@ -32,14 +34,19 @@ const Login = () => {
             });
 
             if (response.status === 200) {
-              const token = response.data.token;
-              const adminStatus = response.data.isAdmin; 
-              login(token, adminStatus); 
-              console.log("Login bem-sucedido:", response.data);
-              console.log("Token:", token);
-              navigate('/');
+                const token = response.data.token;
+                const adminStatus = response.data.isAdmin; 
+                const idCliente = response.data.id;
+
+                console.log("Resposta do servidor:", response.data); // Log da resposta do servidor
+                login(token, adminStatus, idCliente); 
+                console.log("Id do cliente:", idCliente); // Log do id do cliente
+                // Descomente a navegação após verificar se o login está funcionando
+                navigate('/');
             } 
         } catch (error) {
+            console.error("Erro na tentativa de login:", error); // Log do erro
+
             if (error.response) {
                 if (error.response.status === 401) {
                     Swal.fire({
@@ -53,7 +60,6 @@ const Login = () => {
                         title: 'Erro no login',
                         text: 'Algo deu errado. Tente novamente.',
                     });
-                    console.error("Erro no login:", error.response.data);
                 }
             } else if (error.request) {
                 Swal.fire({
@@ -61,19 +67,17 @@ const Login = () => {
                     title: 'Erro no servidor',
                     text: 'Não foi possível conectar ao servidor. Tente novamente mais tarde.',
                 });
-                console.error("Erro na requisição:", error.request);
             } else {
-                // Erro ao configurar a requisição
                 Swal.fire({
                     icon: 'error',
                     title: 'Erro',
                     text: 'Um erro ocorreu ao processar sua solicitação.',
                 });
-                console.error('Erro desconhecido:', error.message);
             }
         }
     }
 };
+
 
   const handleForgotSenha = () => {
     console.log("Redirecionar para página de recuperação de senha");

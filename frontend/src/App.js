@@ -1,4 +1,4 @@
-import { Login, ProductCard, Sucess, ProductForm } from './components';
+import { Login, ProductCard, Sucess, ProductForm, Dashboard } from './components';
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useParams } from 'react-router-dom';
 import Home from './Home';
@@ -39,8 +39,8 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/product/:id" element={<ProductDetails />} /> 
       <Route path="/Teste" element={<h1>Teste</h1>} /> 
-      <Route path="/sucess" element={<Sucess  />} />
-      <Route path="/admin/dashboard" element={<h1>Dashboard</h1>} />
+      <Route path="/sucess" element={<Sucess/>} />
+      <Route path="/admin/dashboard" element={<Dashboard/>} />
       <Route path="/admin/products" element={<ProductForm/>} />
       <Route path="*" element={<h1>Not Found</h1>} />
 

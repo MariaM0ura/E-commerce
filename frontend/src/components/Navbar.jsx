@@ -38,7 +38,7 @@ const Navbar = () => {
             <button
               type='button'
               className='cart-icon'
-              onClick={() => console.log('Dashboard')}
+              onClick={() => navigate('/admin/dashboard')}
               aria-label="Dashboard"
             >
               <AiOutlineAreaChart size={40}/>
