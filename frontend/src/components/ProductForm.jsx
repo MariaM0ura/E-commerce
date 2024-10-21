@@ -84,7 +84,7 @@ const Products = () => {
   // Função para buscar todos os produtos do backend ao carregar a página
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/produtos") // Ajuste conforme o caminho correto da sua API
+      .get("http://localhost:8800/api/produtos") // Ajuste conforme o caminho correto da sua API
       .then((response) => {
         setProducts(response.data); // Atualiza os produtos com os dados vindos do backend
       })
@@ -96,7 +96,7 @@ const Products = () => {
   // Função para adicionar um novo produto
   const addProduct = (newProduct) => {
     axios
-      .post("http://localhost:5000/api/produtos", newProduct) // Envia o produto para o backend
+      .post("http://localhost:8800/api/produtos", newProduct) // Envia o produto para o backend
       .then((response) => {
         setProducts([...products, response.data]); // Atualiza a lista local com o novo produto adicionado
       })

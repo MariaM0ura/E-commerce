@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-const Product = ({ product }) => { // Recebe apenas o objeto individual do produto
+const Product = ({ product }) => { 
     return (
         <div>
             <Link to={`/product/${product.id}`}>

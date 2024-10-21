@@ -6,9 +6,9 @@ const Products = ({ product }) => {
     return (
         <>
             {product.map((product) => (
-                <div key={product.id}> {/* Adicione a propriedade key aqui */}
+                <div key={product.id}> 
                     <h3>{product.nome}</h3>
-                    <img src={product.imagem} alt={product.nome} width="100" /> {/* Corrigido ulr para src */}
+                    <img src={product.imagem} alt={product.nome} width="100" /> 
                 </div>
             ))}
         </>
